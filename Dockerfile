@@ -14,6 +14,12 @@ ENV KC_DB_PASSWORD=jxr0uz7EAo3JQDY5z5reWFLWWaiTK5Hf
 # Expose port
 EXPOSE 8080
 
-# Run Keycloak in development mode (or remove --dev for production  )
+# Run the Keycloak build step
 RUN /opt/keycloak/bin/kc.sh build
-CMD ["start"]
+
+# Expose Keycloak port
+EXPOSE 8080
+
+# Start in development mode
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+CMD ["start-dev"]
