@@ -15,6 +15,9 @@ ENV KC_HTTPS_CERTIFICATE_KEY_STORE_PASSWORD=password
 ENV KC_HTTPS_CERTIFICATE_KEY_STORE_TYPE=PKCS12
 ENV KC_HTTPS_CERTIFICATE_KEY_STORE_ALIAS=keycloak
 
+# Disable Liquibase checksum validation
+ENV KC_FEATURES=preview
+
 # Enable HTTPS and proxy
 ENV KC_HTTPS_PORT=8443
 ENV KC_HTTP_ENABLED=false
@@ -33,4 +36,4 @@ RUN /opt/keycloak/bin/kc.sh build
 EXPOSE 8443
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start"]
+CMD ["start", "--spi-changelog-checks-validate-on-startup=false"]
