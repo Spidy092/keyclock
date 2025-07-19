@@ -22,6 +22,7 @@ ENV KC_PROXY=edge
 ENV KC_HOSTNAME=keyclock-zgu6.onrender.com
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HOSTNAME_STRICT_HTTPS=false
+ENV KC_CACHE=local
 
 # Copy the certificate into container
 COPY keycloak.p12 /opt/keycloak/conf/
