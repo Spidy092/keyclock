@@ -10,11 +10,11 @@ ENV KC_DB_URL=jdbc:postgresql://dpg-d1rra3be5dus73c4aje0-a:5432/keycloak_osu4
 ENV KC_DB_USERNAME=keycloak
 ENV KC_DB_PASSWORD=jxr0uz7EAo3JQDY5z5reWFLWWaiTK5Hf
 
-# Enable HTTP (HTTPS will be handled by Cloudflare or Render)
+# Proxy + hostname config for Render
 ENV KC_HTTP_ENABLED=true
+ENV KC_HTTPS_ENABLED=false
 ENV KC_PROXY=edge
-
-# Optional: disable strict hostname checks (for Render or tunnel)
+ENV KC_HOSTNAME=keyclock-zgu6.onrender.com
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HOSTNAME_STRICT_HTTPS=false
 
