@@ -6,9 +6,9 @@ ENV KEYCLOAK_ADMIN_PASSWORD=admin123
 
 # Database connection
 ENV KC_DB=postgres
-ENV KC_DB_URL=jdbc:postgresql://<YOUR_DB_HOST>:5432/keycloak
+ENV KC_DB_URL=jdbc:postgresql://dpg-d1rra3be5dus73c4aje0-a:5432/keycloak_osu4
 ENV KC_DB_USERNAME=keycloak
-ENV KC_DB_PASSWORD=<your-password>
+ENV KC_DB_PASSWORD=jxr0uz7EAo3JQDY5z5reWFLWWaiTK5Hf
 
 # Enable HTTP (HTTPS will be handled by Cloudflare or Render)
 ENV KC_HTTP_ENABLED=true
